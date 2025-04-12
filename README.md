@@ -117,6 +117,6 @@ To elevate this chatbot beyond rule-based logic:
 ## 🧑‍💼 Author
 
 **Vikram Singh**  
-For academic collaborations, contributions, or product integration: [LinkedIn](#https://www.linkedin.com/in/vikramkumarsingh0/) | [Email](#vikramkumarsingh.kpt@gmail.com)
+For academic collaborations, contributions, or product integration: <a href="https://www.linkedin.com/in/vikramkumarsingh0/">[LinkedIn]</a>#https://www.linkedin.com/in/vikramkumarsingh0/)
 
 ---
