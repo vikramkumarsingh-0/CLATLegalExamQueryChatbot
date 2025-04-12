@@ -1,5 +1,5 @@
 numpy==1.23.5
-spacy==3.7.1
-thinc==8.1.12
+pandas==1.5.3
+spacy==3.7.2
 streamlit==1.32.2
 en-core-web-md @ https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.7.1/en_core_web_md-3.7.1-py3-none-any.whl
