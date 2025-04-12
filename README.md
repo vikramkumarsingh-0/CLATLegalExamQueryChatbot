@@ -1,71 +1,76 @@
-# CLATLegalExamQueryChatbot
-Sure! Here's a polished and professional `README.md` tailored for your GitHub repo. It integrates your exact requirements and frames them in a clean, developer-friendly format:
+Absolutely! Here's the cleaned-up, **professional version of the README** with all icons and emojis removed, keeping the tone clear and polished:
 
 ---
 
-# ⚖️ CLAT Legal Exam Query Chatbot
+# CLAT Legal Exam Query Chatbot
 
-A lightweight and modular chatbot built to assist users with **CLAT (Common Law Admission Test)** preparation queries. This prototype is designed using a rule-based/NLP approach, deployable via **Streamlit** for instant access.
-
----
-
-## 📌 Problem Statement
-
-**Goal:** Build a simple chatbot prototype that can handle CLAT-related queries through either rule-based logic or natural language processing (NLP).
-
-The chatbot should:
-- Accept a user query via a web interface.
-- Search a predefined knowledge base (or open-source data).
-- Respond with the most relevant answer using basic NLP methods (e.g., spaCy similarity, keyword matching).
+A modular chatbot designed to assist students preparing for the Common Law Admission Test (CLAT). This lightweight prototype leverages semantic similarity models for accurate responses and is deployed using a simple Streamlit interface.
 
 ---
 
-## 🔍 Sample Use Cases
+## Objective
 
-These are example queries the chatbot can currently understand and respond to:
-
-- **“What is the syllabus for CLAT 2025?”**
-- **“How many questions are there in the English section?”**
-- **“Give me last year’s cut-off for NLSIU Bangalore.”**
+This project demonstrates how natural language understanding can be applied to build a domain-specific chatbot. It uses sentence-level embeddings to retrieve the most relevant answers from a predefined knowledge base.
 
 ---
 
-## 📚 Current Knowledge Base
+## Features
 
-> **Note:** This is an MVP using a small, static knowledge base for demonstration. You can expand it as needed.
-
-| Query Intent | Sample Answer |
-|--------------|---------------|
-| **Syllabus** | CLAT 2025 syllabus includes English, Current Affairs, Legal Reasoning, Logical Reasoning, and Quantitative Techniques. |
-| **English Section Questions** | There are around 28–32 questions in the English section. |
-| **NLSIU Cutoff** | The cut-off for NLSIU Bangalore in 2024 was around 85 for the general category. |
-| **Exam Duration** | The CLAT exam duration is 2 hours. |
-| **Application Deadline** | The last date to apply for CLAT 2025 is expected to be in November 2024. |
+- Natural language query processing
+- Semantic similarity matching using Sentence Transformers
+- User-friendly web interface via Streamlit
+- Easily extensible static knowledge base
+- Compatible with Python 3.12 and deployable on Streamlit Cloud
 
 ---
 
-## 🧠 Architecture Overview
+## Example Queries
 
-This application follows the **SOLID principles** and is broken into clean, maintainable components:
+The chatbot can currently respond to questions like:
+
+- What is the syllabus for CLAT 2025?
+- How many questions are there in the English section?
+- What was the cut-off for NLSIU Bangalore in 2024?
+- What is the exam duration for CLAT?
+- When is the last date to apply for CLAT 2025?
+
+---
+
+## Sample Knowledge Base
+
+| Query Category           | Sample Response                                                                 |
+|--------------------------|----------------------------------------------------------------------------------|
+| CLAT Syllabus            | CLAT 2025 syllabus includes English, Current Affairs, Legal Reasoning, Logical Reasoning, and Quantitative Techniques. |
+| English Section          | There are approximately 28–32 questions in the English section.                 |
+| NLSIU Cutoff (2024)      | The general category cut-off for NLSIU Bangalore in 2024 was around 85.         |
+| Exam Duration            | The total exam duration is 2 hours.                                             |
+| Application Deadline     | The last date to apply for CLAT 2025 is expected to be in November 2024.       |
+
+---
+
+## Project Structure
 
 ```
 clat_chatbot/
-├── dashboard.py         # Streamlit frontend UI
-├── backend.py           # NLP logic using spaCy
-├── knowledge_base.py    # Static knowledge base dictionary
-├── requirements.txt     # For dependency management
+├── backend.py           # Core NLP logic using Sentence Transformers
+├── dashboard.py         # Streamlit interface for interaction
+├── knowledge_base.py    # Static question-answer dataset
+├── requirements.txt     # Python 3.12-compatible dependencies
 └── README.md            # Project documentation
 ```
 
-### 🔧 Technologies Used
+---
 
-- **Python 3**
-- **spaCy** (`en_core_web_sm` for lightweight NLP)
-- **Streamlit** (for the interactive web app)
+## Technologies Used
+
+- Python 3.12
+- Sentence Transformers (all-MiniLM-L6-v2)
+- PyTorch
+- Streamlit
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the Repository
 
@@ -74,13 +79,20 @@ git clone https://github.com/your-username/clat-chatbot.git
 cd clat-chatbot
 ```
 
-### 2. Install Dependencies
+### 2. Set Up Virtual Environment
+
+```bash
+python3.12 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+### 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Run the App
+### 4. Run the Application
 
 ```bash
 streamlit run dashboard.py
@@ -88,35 +100,24 @@ streamlit run dashboard.py
 
 ---
 
-## 🌍 Deployment (Streamlit Cloud)
+## Deployment
 
-This project is optimized for **Streamlit Cloud free tier**:
-- Small model (`en_core_web_sm`)
-- Minimal dependencies
-- Easy to deploy directly from GitHub
-
-> Just upload the repo and deploy on [https://share.streamlit.io](https://share.streamlit.io)
+This application is optimized for hosting on Streamlit Cloud. You can deploy it by linking the repository directly through [https://share.streamlit.io](https://share.streamlit.io).
 
 ---
 
-## 🎯 Future Scope & Scaling Suggestions
+## Future Development
 
-To elevate this chatbot beyond rule-based logic:
-
-### 🔁 GPT-based Upgrade (Bonus)
-- Fine-tune a **GPT-style model** on NLTI’s curated CLAT training material.
-- Format training data in QA pairs like:
-  ```
-  User: What is the syllabus for CLAT?
-  Bot: The syllabus includes English, Legal Reasoning...
-  ```
-- Use RAG (retrieval-augmented generation) with tools like **Haystack** or **LlamaIndex** for dynamic document-based answering.
+- Replace the static knowledge base with a document retrieval system.
+- Integrate a fine-tuned GPT model using QA pairs from NLTI’s legal preparation data.
+- Use RAG frameworks such as Haystack or LlamaIndex for dynamic document-based answering.
+- Add feedback loops and query logging for performance evaluation.
 
 ---
 
-## 🧑‍💼 Author
+## Author
 
 **Vikram Singh**  
-For academic collaborations, contributions, or product integration: <a href="https://www.linkedin.com/in/vikramkumarsingh0/">[LinkedIn]</a>#https://www.linkedin.com/in/vikramkumarsingh0/)
+For inquiries, contributions, or collaborations: [LinkedIn Profile](https://www.linkedin.com/in/vikramkumarsingh0/)
 
 ---
