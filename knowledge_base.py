@@ -1,5 +1,3 @@
-# knowledge_base.py
-
 knowledge_base = {
     "syllabus": "CLAT 2025 syllabus includes English, Current Affairs, Legal Reasoning, Logical Reasoning, and Quantitative Techniques.",
     "english_questions": "There are around 28-32 questions in the English section.",
