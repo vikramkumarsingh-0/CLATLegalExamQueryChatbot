@@ -4,7 +4,13 @@ import spacy
 class CLATBot:
     def __init__(self, knowledge_base):
         self.knowledge_base = knowledge_base
-        self.nlp = spacy.load("en_core_web_md")
+        try:
+            nlp = spacy.load("en_core_web_sm")
+        except OSError:
+            from spacy.cli import download
+            download("en_core_web_sm")
+            nlp = spacy.load("en_core_web_sm")
+
 
     def get_best_match(self, query: str) -> str:
         query_doc = self.nlp(query)
